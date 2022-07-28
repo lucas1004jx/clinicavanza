@@ -35,7 +35,7 @@ export const Header: FC = () => {
     <StyledHeader>
         <StyledHeaderTitleWrapper>
           <StyledTitle>
-          <Typography variant='h5'>
+          <Typography variant='h5' fontWeight='light'>
           UNA VIDA SALUDABLE
         </Typography>
         <Typography variant='h5' fontWeight='bold'>

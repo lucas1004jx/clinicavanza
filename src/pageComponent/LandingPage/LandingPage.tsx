@@ -1,9 +1,11 @@
-import { AppBar, Typography } from '@mui/material'
+import { AppBar, Container, Typography } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Header } from './Header';
 import { FC } from 'react';
 import { TopBar } from './TopBar';
+import { AboutUs } from './AboutUs';
+import { Service } from './Service';
 
 
 
@@ -18,6 +20,10 @@ export const LandingPage: FC = () => {
       <main>
        <TopBar/>
        <Header/>
+       <Container>
+       <AboutUs/>
+       <Service />
+       </Container>
       </main>
 
     </div>

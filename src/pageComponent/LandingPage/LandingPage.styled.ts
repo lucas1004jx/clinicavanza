@@ -1,7 +1,10 @@
-import { AppBar } from '@mui/material';
+import { AppBar, Paper } from '@mui/material';
 import { styled } from '@mui/system';
 import { url } from 'inspector';
 import theme from 'styles/theme';
+
+
+
 
 export const StyledAppBar = styled(AppBar)({
   height:'48px',
@@ -20,7 +23,6 @@ export const StyledImage = styled('img')({
 
 
 export const StyledHeader = styled('div')({
-  width:'100%',
   height:'240px',
  marginTop:theme.spacing(6),
  position:'relative',
@@ -50,4 +52,14 @@ export const StyledCheckPointWrapper = styled('div')({
   display:'flex',
   gap:theme.spacing(1),
   flexWrap:'wrap'
+ })
+
+ export const StyledSection = styled('section')({
+  margin:theme.spacing(3,0),
+ })
+
+ export const StyledImg = styled('img')({
+    width:'100%',
+    height:'100%',
+    objectFit:'cover'
  })
