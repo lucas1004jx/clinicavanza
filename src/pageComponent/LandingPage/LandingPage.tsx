@@ -5,6 +5,7 @@ import { Header } from './Header';
 import { TopBar } from './TopBar';
 import { AboutUs } from './AboutUs';
 import { Service } from './Service';
+import { Location } from './Location';
 
 export const LandingPage: FC = () => (
   <div>
@@ -19,6 +20,7 @@ export const LandingPage: FC = () => (
       <Container>
         <AboutUs />
         <Service />
+        <Location />
       </Container>
     </main>
 
