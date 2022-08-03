@@ -1,8 +1,8 @@
 import { Container } from '@mui/material';
 import Head from 'next/head';
 import { FC } from 'react';
+import { TopBar } from 'components/TopBar/TopBar';
 import { Header } from './Header';
-import { TopBar } from './TopBar';
 import { AboutUs } from './AboutUs';
 import { Service } from './Service';
 import { Location } from './Location';

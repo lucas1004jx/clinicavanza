@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import {LandingPage} from 'pageComponent/LandingPage'
+import type { NextPage } from 'next';
+import { LandingPage } from 'pageComponents/LandingPage';
 
-const Landing: NextPage = () => <LandingPage/>
+const Landing: NextPage = () => <LandingPage />;
 
-export default Landing
+export default Landing;

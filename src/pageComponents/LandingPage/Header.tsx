@@ -5,8 +5,8 @@ import {
   StyledCheckPoint,
   StyledCheckPointWrapper,
   StyledHeader,
+  StyledHeaderMainTitle,
   StyledHeaderTitleWrapper,
-  StyledTitle,
 } from './LandingPage.styled';
 import { CheckPointProps } from './LandingPage.model';
 
@@ -30,14 +30,14 @@ const CheckPoints:FC = () => (
 export const Header: FC = () => (
   <StyledHeader>
     <StyledHeaderTitleWrapper>
-      <StyledTitle>
+      <StyledHeaderMainTitle>
         <Typography variant="h5" fontWeight="light">
           UNA VIDA SALUDABLE
         </Typography>
         <Typography variant="h5" fontWeight="bold">
           EMPIEZA AHORA
         </Typography>
-      </StyledTitle>
+      </StyledHeaderMainTitle>
       <CheckPoints />
 
     </StyledHeaderTitleWrapper>

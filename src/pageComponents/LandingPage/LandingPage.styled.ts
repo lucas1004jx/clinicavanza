@@ -1,21 +1,6 @@
-import { AppBar } from '@mui/material';
+import { Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import theme from 'styles/theme';
-
-export const StyledAppBar = styled(AppBar)({
-  height: '48px',
-  display: 'flex',
-  justifyContent: 'space-between',
-  flexDirection: 'row',
-  alignItems: 'center',
-  padding: theme.spacing(1, 2),
-  color: theme.palette.text.primary,
-});
-
-export const StyledImage = styled('img')({
-  height: '100%',
-  objectFit: 'contain',
-});
 
 export const StyledHeader = styled('div')({
   height: '240px',
@@ -26,6 +11,11 @@ export const StyledHeader = styled('div')({
   backgroundSize: 'cover',
 });
 
+export const StyledTitle = styled(Typography)({
+  fontSize: theme.typography.h6.fontSize,
+  textAlign: 'center',
+});
+
 export const StyledHeaderTitleWrapper = styled('div')({
   position: 'absolute',
   color: theme.palette.background.default,
@@ -34,7 +24,7 @@ export const StyledHeaderTitleWrapper = styled('div')({
   width: '70%',
 });
 
-export const StyledTitle = styled('div')({
+export const StyledHeaderMainTitle = styled('div')({
   marginBottom: theme.spacing(2),
 });
 
@@ -57,4 +47,10 @@ export const StyledImg = styled('img')({
   width: '100%',
   height: '100%',
   objectFit: 'cover',
+});
+
+export const StyledMap = styled('iframe')({
+  width: '100%',
+  height: '240px',
+  border: 'none',
 });

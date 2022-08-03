@@ -26,5 +26,6 @@ module.exports = {
     'import/prefer-default-export': 0,
     'react/function-component-definition': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
+    'max-len': 'off',
   },
 };
