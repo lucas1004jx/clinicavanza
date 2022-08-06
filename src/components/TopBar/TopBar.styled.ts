@@ -1,9 +1,10 @@
 import { AppBar } from '@mui/material';
 import { styled } from '@mui/system';
+import { TOP_BAR_HEIGHT } from 'constants/style';
 import theme from 'styles/theme';
 
 export const StyledAppBar = styled(AppBar)({
-  height: '48px',
+  height: TOP_BAR_HEIGHT,
   display: 'flex',
   justifyContent: 'space-between',
   flexDirection: 'row',
