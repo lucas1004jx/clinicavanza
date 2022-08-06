@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import Head from 'next/head';
 import { FC } from 'react';
 import { TopBar } from 'components/TopBar/TopBar';
+import { Footer } from 'components/Footer/Footer';
 import { Header } from './Header';
 import { AboutUs } from './AboutUs';
 import { Service } from './Service';
@@ -22,6 +23,7 @@ export const LandingPage: FC = () => (
         <Service />
         <Location />
       </Container>
+      <Footer />
     </main>
 
   </div>
