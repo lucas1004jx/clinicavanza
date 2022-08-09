@@ -27,5 +27,7 @@ module.exports = {
     'react/function-component-definition': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
     'max-len': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'no-unused-vars': 'off',
   },
 };

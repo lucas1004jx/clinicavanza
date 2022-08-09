@@ -1,4 +1,5 @@
+import { RevisionForm } from 'pageComponents/RevisionForm';
 import { FC } from 'react';
 
-const RevisionPage:FC = () => <div>revision form</div>;
+const RevisionPage:FC = () => <RevisionForm />;
 export default RevisionPage;
