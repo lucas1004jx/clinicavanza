@@ -1,11 +1,9 @@
 import { Typography } from '@mui/material';
 import { styled } from '@mui/system';
-import { TOP_BAR_HEIGHT } from 'constants/style';
 import theme from 'styles/theme';
 
 export const StyledHeader = styled('div')({
   height: '240px',
-  marginTop: TOP_BAR_HEIGHT,
   position: 'relative',
   padding: theme.spacing(2),
   background: 'url(header-bcg.png) no-repeat center center',
