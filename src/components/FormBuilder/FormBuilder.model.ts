@@ -1,14 +1,23 @@
 export type FormFieldType = 'input'
 
-export interface CommonFormConfig {
-    type:string
+interface Option {
+    id:string
     name:string
-    label:string
+}
+
+export interface CommonFormConfig {
+    name:string
+    placeholder?:string
+    fieldName:string
 }
 export interface InputFieldConfig extends CommonFormConfig{
-
+    type:'input'
 }
-export type FormConfig = InputFieldConfig
+export interface SelectFieldConfig extends CommonFormConfig{
+    type:'select'
+    options:Option[]
+}
+export type FormConfig = InputFieldConfig | SelectFieldConfig
 
 export interface FormBuilderProps {
     configs:FormConfig[]
