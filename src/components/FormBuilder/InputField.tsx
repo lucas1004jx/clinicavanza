@@ -1,4 +1,4 @@
-import { TextField, Typography } from '@material-ui/core';
+import { TextField, Typography } from '@mui/material';
 import { FC } from 'react';
 import { Controller, Control } from 'react-hook-form';
 import { InputFieldConfig } from './FormBuilder.model';

@@ -1,6 +1,5 @@
-import { MenuItem, Typography } from '@material-ui/core';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { FC, useState } from 'react';
+import { MenuItem, Typography, Select } from '@mui/material';
+import { FC } from 'react';
 import { Control, Controller } from 'react-hook-form';
 import { SelectFieldConfig } from './FormBuilder.model';
 import { StyledFieldWrapper } from './FormBuilder.styled';

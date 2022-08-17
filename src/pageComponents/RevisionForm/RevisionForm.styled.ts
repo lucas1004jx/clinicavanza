@@ -1,4 +1,4 @@
-import { Button, Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 import { styled } from '@mui/system';
 import theme from 'styles/theme';
 
@@ -9,4 +9,6 @@ export const StyledContainer = styled(Container)({
 
 export const StyledButtonWrapper = styled('div')({
   marginTop: theme.spacing(2),
+  display: 'flex',
+  flexDirection: 'column',
 });

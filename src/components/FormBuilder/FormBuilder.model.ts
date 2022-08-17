@@ -1,3 +1,5 @@
+import { Control } from 'react-hook-form';
+
 export type FormFieldType = 'input'
 
 interface Option {
@@ -22,4 +24,5 @@ export type FormConfig = InputFieldConfig | SelectFieldConfig
 export interface FormBuilderProps {
     configs:FormConfig[]
     onSubmit:(data:any)=>void
+    control:Control
 }

@@ -1,14 +1,16 @@
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import { FormBuilder } from 'components/FormBuilder';
 import { FormConfig } from 'components/FormBuilder/FormBuilder.model';
+import { useForm } from 'react-hook-form';
 import { StyledButtonWrapper, StyledContainer } from './RevisionForm.styled';
 
 export const RevisionForm = () => {
+  const { control, handleSubmit } = useForm();
   const onSubmit = (data:any) => {
-    console.log(data);
+    console.log('data--->', data);
   };
 
-  const configs:FormConfig[] = [
+  const personalDataconfigs:FormConfig[] = [
     {
       type: 'input',
       name: 'nombre',
@@ -77,7 +79,9 @@ export const RevisionForm = () => {
 
   return (
     <StyledContainer>
-      <FormBuilder configs={configs} onSubmit={onSubmit} />
+      <form onSubmit={handleSubmit(onSubmit)} id="my-form">
+        <FormBuilder configs={personalDataconfigs} onSubmit={onSubmit} control={control} />
+      </form>
       <StyledButtonWrapper>
         <Button type="submit" form="my-form" variant="contained">Submit</Button>
       </StyledButtonWrapper>
