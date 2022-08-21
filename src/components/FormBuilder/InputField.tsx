@@ -4,12 +4,13 @@ import { Controller, Control } from 'react-hook-form';
 import { InputFieldConfig } from './FormBuilder.model';
 import { StyledFieldWrapper } from './FormBuilder.styled';
 
-interface Props extends InputFieldConfig{
+interface Props extends Omit<InputFieldConfig, 'type'> {
     control:Control
+    multiline?:boolean
 }
 
 export const InputField:FC<Props> = ({
-  control, name, placeholder, fieldName,
+  control, name, placeholder, fieldName, multiline,
 }) => (
   <StyledFieldWrapper>
     <Typography>
@@ -19,7 +20,7 @@ export const InputField:FC<Props> = ({
       name={name}
       control={control}
       defaultValue=""
-      render={({ field }) => <TextField id={name} label={placeholder} variant="outlined" {...field} />}
+      render={({ field }) => <TextField id={name} label={placeholder} variant="outlined" multiline={multiline} {...field} />}
     />
   </StyledFieldWrapper>
 

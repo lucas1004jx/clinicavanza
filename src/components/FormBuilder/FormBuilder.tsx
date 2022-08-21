@@ -11,6 +11,11 @@ export const FormBuilder:FC<FormBuilderProps> = ({ configs, control }) => {
           <InputField {...config} control={control} key={config.name} />
         );
       }
+      case 'textArea': {
+        return (
+          <InputField {...config} control={control} key={config.name} />
+        );
+      }
       case 'select': {
         return (
           <SelectField {...config} control={control} key={config.name} />

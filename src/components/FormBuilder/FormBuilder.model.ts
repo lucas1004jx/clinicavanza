@@ -15,14 +15,17 @@ export interface CommonFormConfig {
 export interface InputFieldConfig extends CommonFormConfig{
     type:'input'
 }
+
+export interface TextAreaFieldConfig extends CommonFormConfig{
+    type:'textArea'
+}
 export interface SelectFieldConfig extends CommonFormConfig{
     type:'select'
     options:Option[]
 }
-export type FormConfig = InputFieldConfig | SelectFieldConfig
+export type FormConfig = InputFieldConfig | SelectFieldConfig | TextAreaFieldConfig
 
 export interface FormBuilderProps {
     configs:FormConfig[]
-    onSubmit:(data:any)=>void
     control:Control
 }
