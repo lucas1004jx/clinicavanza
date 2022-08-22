@@ -1,6 +1,9 @@
-import { Button, Typography } from '@mui/material';
+import {
+  Button, Typography,
+} from '@mui/material';
+import { Accordion } from 'components/Accordion';
+
 import { FormBuilder } from 'components/FormBuilder';
-import { FormConfig } from 'components/FormBuilder/FormBuilder.model';
 import { useForm } from 'react-hook-form';
 import {
   goalDataCofigs,
@@ -17,13 +20,12 @@ export const RevisionForm = () => {
   return (
     <StyledContainer>
       <form onSubmit={handleSubmit(onSubmit)} id="my-form">
-        <FormBuilder configs={personalDataConfigs} control={control} />
-        <Typography>PATOLOGÍAS</Typography>
-        <FormBuilder configs={pathologiesDataConfigs} control={control} />
-        <FormBuilder configs={habitDataConfigs} control={control} />
-        <FormBuilder configs={relatedDataCofigs} control={control} />
-        <FormBuilder configs={goalDataCofigs} control={control} />
+        <Accordion title="Datos personales" content={<FormBuilder configs={personalDataConfigs} control={control} />} defaultExpanded />
+        <Accordion title="Patología" content={<FormBuilder configs={pathologiesDataConfigs} control={control} />} />
+        <Accordion title="Informationció nutricional, diaria" content={<FormBuilder configs={habitDataConfigs} control={control} />} />
+        <Accordion title="Objectivo" content={<FormBuilder configs={goalDataCofigs} control={control} />} />
       </form>
+
       <StyledButtonWrapper>
         <Button type="submit" form="my-form" variant="contained">Submit</Button>
       </StyledButtonWrapper>
