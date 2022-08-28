@@ -7,23 +7,23 @@ interface Option {
     name:string
 }
 
-export interface CommonFormConfig {
-    name:string
+export interface CommonFormConfig<FieldName = string> {
+    name:FieldName
     placeholder?:string
     fieldName:string
 }
-export interface InputFieldConfig extends CommonFormConfig{
+export interface InputFieldConfig<FieldName> extends CommonFormConfig<FieldName>{
     type:'input'
 }
 
-export interface TextAreaFieldConfig extends CommonFormConfig{
+export interface TextAreaFieldConfig<FieldName> extends CommonFormConfig<FieldName>{
     type:'textArea'
 }
-export interface SelectFieldConfig extends CommonFormConfig{
+export interface SelectFieldConfig<FieldName> extends CommonFormConfig<FieldName>{
     type:'select'
     options:Option[]
 }
-export type FormConfig = InputFieldConfig | SelectFieldConfig | TextAreaFieldConfig
+export type FormConfig<FieldName = string> = InputFieldConfig<FieldName> | SelectFieldConfig<FieldName> | TextAreaFieldConfig<FieldName>
 
 export interface FormBuilderProps {
     configs:FormConfig[]

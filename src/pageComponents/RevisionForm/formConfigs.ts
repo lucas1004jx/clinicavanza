@@ -1,29 +1,33 @@
 import { FormConfig } from 'components/FormBuilder/FormBuilder.model';
+import {
+  GoalDataField,
+  HabitDataField, PathologiesDataField, PersonalDataField, RelatedDataField,
+} from 'models/form';
 
-export const personalDataConfigs:FormConfig[] = [
+export const personalDataConfigs:FormConfig<PersonalDataField>[] = [
   {
     type: 'input',
-    name: 'nombre',
+    name: 'user_name',
     fieldName: 'Nombre y appellido',
   },
   {
     type: 'input',
-    name: 'edad',
+    name: 'age',
     fieldName: 'Edad',
   },
   {
     type: 'input',
-    name: 'pesoinicial',
+    name: 'initial_weight',
     fieldName: 'Peso inicial(en ayunas)',
   },
   {
     type: 'input',
-    name: 'altura',
+    name: 'height',
     fieldName: 'Altura',
   },
   {
     type: 'input',
-    name: 'groupsanguineo',
+    name: 'blood_group',
     fieldName: 'Group sanguíneo',
   },
   {
@@ -33,26 +37,26 @@ export const personalDataConfigs:FormConfig[] = [
   },
   {
     type: 'input',
-    name: 'telefono',
+    name: 'phone_number',
     fieldName: 'Teléfono',
   },
   {
     type: 'input',
-    name: 'ciudad',
+    name: 'city',
     fieldName: 'Ciudad y país',
   },
   {
     type: 'input',
-    name: 'instagram',
+    name: 'ins_handler',
     fieldName: 'Instagram',
   },
   {
     type: 'select',
-    name: 'consentimiento',
+    name: 'consent',
     fieldName: 'Consentimiento a promocionar tu imagen en redes sociales.',
     options: [
       {
-        id: 'si',
+        id: 'sí',
         name: 'sí',
       },
       {
@@ -60,14 +64,14 @@ export const personalDataConfigs:FormConfig[] = [
         name: 'no',
       },
       {
-        id: 'con identidad oculta',
+        id: 'Sí, pero ocultando mi identidad',
         name: 'Sí, pero ocultando mi identidad',
       },
     ],
   },
 ];
 
-export const pathologiesDataConfigs:FormConfig[] = [
+export const pathologiesDataConfigs:FormConfig<PathologiesDataField>[] = [
   {
     type: 'textArea',
     name: 'allergy',
@@ -75,7 +79,7 @@ export const pathologiesDataConfigs:FormConfig[] = [
   },
 ];
 
-export const habitDataConfigs:FormConfig[] = [
+export const habitDataConfigs:FormConfig<HabitDataField>[] = [
   {
     type: 'textArea',
     name: 'intolerance',
@@ -83,17 +87,17 @@ export const habitDataConfigs:FormConfig[] = [
   },
   {
     type: 'textArea',
-    name: 'leastFavoriteFood',
+    name: 'least_favorite_food',
     fieldName: 'Alimentos que no gustan',
   },
   {
     type: 'textArea',
-    name: 'favoriteFood',
+    name: 'favorite_food',
     fieldName: 'Alimentos que encantan',
   },
   {
     type: 'select',
-    name: 'foodSchedual',
+    name: 'food_schedule',
     fieldName: 'Horario Aprox, de comidas',
     options: [
       {
@@ -125,32 +129,32 @@ export const habitDataConfigs:FormConfig[] = [
   },
   {
     type: 'textArea',
-    name: 'getUpTime',
+    name: 'getup_time',
     fieldName: 'Hora a la que te sueles levantar',
   },
   {
     type: 'textArea',
-    name: 'bedTime',
+    name: 'bed_time',
     fieldName: 'Hora a la que te sueles acostar',
   },
   {
     type: 'textArea',
-    name: 'jobDescription',
+    name: 'job_description',
     fieldName: 'Descripción de tu trabajo',
   },
   {
     type: 'textArea',
-    name: 'gymTime',
+    name: 'gym_time',
     fieldName: 'Hora a la que vas al GYM',
   },
   {
     type: 'textArea',
-    name: 'trainingTime',
+    name: 'training_time',
     fieldName: 'Duración del ENTRENO',
   },
   {
     type: 'textArea',
-    name: 'trainingFrecuency',
+    name: 'training_frecuency',
     fieldName: 'Días a la semana de Entreno',
   },
   {
@@ -160,12 +164,12 @@ export const habitDataConfigs:FormConfig[] = [
   },
   {
     type: 'textArea',
-    name: 'currentFoodHabit',
+    name: 'current_food_habit',
     fieldName: 'Descríbeme lo que sueles comer actualmente un día cualquiera',
   },
 ];
 
-export const relatedDataCofigs:FormConfig[] = [
+export const relatedDataCofigs:FormConfig<RelatedDataField>[] = [
   {
     type: 'textArea',
     name: 'relatedData',
@@ -173,7 +177,7 @@ export const relatedDataCofigs:FormConfig[] = [
   },
 ];
 
-export const goalDataCofigs:FormConfig[] = [
+export const goalDataCofigs:FormConfig<GoalDataField>[] = [
   {
     type: 'textArea',
     name: 'goal',
