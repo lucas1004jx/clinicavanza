@@ -12,14 +12,15 @@ export interface CommonFormConfig<FieldName = string> {
     placeholder?:string
     fieldName:string
 }
-export interface InputFieldConfig<FieldName> extends CommonFormConfig<FieldName>{
+export interface InputFieldConfig<FieldName = string> extends CommonFormConfig<FieldName>{
     type:'input'
 }
 
-export interface TextAreaFieldConfig<FieldName> extends CommonFormConfig<FieldName>{
+export interface TextAreaFieldConfig<FieldName = string> extends CommonFormConfig<FieldName>{
     type:'textArea'
+    rows?:number
 }
-export interface SelectFieldConfig<FieldName> extends CommonFormConfig<FieldName>{
+export interface SelectFieldConfig<FieldName = string> extends CommonFormConfig<FieldName>{
     type:'select'
     options:Option[]
 }

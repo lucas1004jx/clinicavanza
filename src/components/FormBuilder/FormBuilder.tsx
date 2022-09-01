@@ -13,7 +13,7 @@ export const FormBuilder:FC<FormBuilderProps> = ({ configs, control }) => {
       }
       case 'textArea': {
         return (
-          <InputField {...config} control={control} key={config.name} />
+          <InputField {...config} control={control} key={config.name} multiline />
         );
       }
       case 'select': {

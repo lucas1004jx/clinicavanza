@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material';
+import Link from 'next/link';
 import { FC } from 'react';
 import {
   StyledAppBar,
@@ -7,7 +8,10 @@ import {
 
 export const TopBar: FC = () => (
   <StyledAppBar>
-    <StyledImage src="/logo.png" alt="logo" />
+    <Link href="/">
+      <StyledImage src="/logo.png" alt="logo" />
+    </Link>
+
     <Typography>ES HORA DE CAMBIAR</Typography>
   </StyledAppBar>
 );

@@ -1,11 +1,12 @@
 import { Link, Typography } from '@mui/material';
+import { ComponentPropsBase } from 'models/baseProps';
 import { FC } from 'react';
 import { StyledFooter } from './Footer.styled';
 
-export const Footer:FC = () => {
+export const Footer:FC<ComponentPropsBase> = ({ className }) => {
   const href = 'mailTo:clinicavanza@gmail.com';
   return (
-    <StyledFooter>
+    <StyledFooter className={className}>
       <Typography>Horario: L - V De 10:00 A 20:00</Typography>
       <Typography>
         Email:

@@ -7,10 +7,11 @@ import { StyledFieldWrapper } from './FormBuilder.styled';
 interface Props extends Omit<InputFieldConfig, 'type'> {
     control:Control
     multiline?:boolean
+    rows?:number
 }
 
 export const InputField:FC<Props> = ({
-  control, name, placeholder, fieldName, multiline,
+  control, name, placeholder, fieldName, multiline, rows = 4,
 }) => (
   <StyledFieldWrapper>
     <Typography>
@@ -20,7 +21,16 @@ export const InputField:FC<Props> = ({
       name={name}
       control={control}
       defaultValue=""
-      render={({ field }) => <TextField id={name} label={placeholder} variant="outlined" multiline={multiline} {...field} />}
+      render={({ field }) => (
+        <TextField
+          id={name}
+          label={placeholder}
+          variant="outlined"
+          multiline={multiline}
+          rows={rows}
+          {...field}
+        />
+      )}
     />
   </StyledFieldWrapper>
 

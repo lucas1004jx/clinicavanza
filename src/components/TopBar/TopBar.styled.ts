@@ -10,7 +10,7 @@ export const StyledAppBar = styled(AppBar)({
   flexDirection: 'row',
   alignItems: 'center',
   padding: theme.spacing(1, 2),
-  color: theme.palette.text.primary,
+  color: theme.palette.text.secondary,
 });
 
 export const StyledImage = styled('img')({

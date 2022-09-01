@@ -11,9 +11,9 @@ import {
   goalDataCofigs,
   habitDataConfigs, pathologiesDataConfigs, personalDataConfigs, relatedDataCofigs,
 } from './formConfigs';
-import { StyledButtonWrapper, StyledContainer } from './RevisionForm.styled';
+import { StyledButtonWrapper, StyledContainer } from './InitialForm.styled';
 
-export const RevisionForm = () => {
+export const InitialForm = () => {
   const { control, handleSubmit } = useForm();
 
   const formRef = useRef<HTMLFormElement>(null);

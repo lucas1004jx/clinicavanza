@@ -21,7 +21,7 @@ export type HabitDataField =
 | 'bed_time'
 | 'job_description'
 | 'gym_time'
-| 'training_time'
+| 'training_duration'
 | 'training_frecuency'
 | 'supplementation'
 | 'current_food_habit'
