@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import theme from 'styles/theme';
 
@@ -21,10 +21,14 @@ export const StyledHeaderTitleWrapper = styled('div')({
   top: '50%',
   transform: 'translateY(-50%)',
   width: '70%',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '12px',
+  alignItems: 'flex-start',
 });
 
 export const StyledHeaderMainTitle = styled('div')({
-  marginBottom: theme.spacing(2),
+
 });
 
 export const StyledCheckPoint = styled('div')({
