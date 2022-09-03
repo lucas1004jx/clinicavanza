@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/material';
+import { Button, Paper, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import theme from 'styles/theme';
 
@@ -42,8 +42,14 @@ export const StyledCheckPointWrapper = styled('div')({
   flexWrap: 'wrap',
 });
 
-export const StyledSection = styled('section')({
+export const StyledSection = styled(Paper)({
   margin: theme.spacing(3, 0),
+  padding: theme.spacing(1.5),
+});
+
+export const StyledMediaWrapper = styled('div')({
+  marginLeft: theme.spacing(-1.5),
+  marginRight: theme.spacing(-1.5),
 });
 
 export const StyledImg = styled('img')({
