@@ -1,6 +1,12 @@
-import { Button, Paper, Typography } from '@mui/material';
+import {
+  Container, Paper, Typography,
+} from '@mui/material';
 import { styled } from '@mui/system';
 import theme from 'styles/theme';
+
+export const StyledContainer = styled(Container)({
+
+});
 
 export const StyledHeader = styled('div')({
   height: '240px',

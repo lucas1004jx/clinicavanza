@@ -6,5 +6,5 @@ export const StyledFooter = styled('div')({
   background: theme.palette.primary.main,
   padding: theme.spacing(2),
   color: theme.palette.text.secondary,
-  height: FOOTER_HEIGHT,
+  minHeight: FOOTER_HEIGHT,
 });

@@ -10,9 +10,14 @@ export const Footer:FC<ComponentPropsBase> = ({ className }) => {
       <Typography>Horario: L - V De 10:00 A 20:00</Typography>
       <Typography>
         Email:
-        <Link href={href} color="inherit">clinicavanza@gmail.com</Link>
+        <Link href={href} color="inherit">info@centroavanza.net</Link>
       </Typography>
-      <Typography>Tel:902 346 890 </Typography>
+      <Typography>
+        Tel:983 403 450
+      </Typography>
+      <Typography>
+        Movil:605 611 639
+      </Typography>
     </StyledFooter>
   );
 };

@@ -1,7 +1,7 @@
 import { Container } from '@mui/material';
-import Head from 'next/head';
 import { FC } from 'react';
-import { DefaultLayout } from 'layout/DefaultLayout';
+
+import { WhatsappButton } from 'components/WhatsappButton/WhatsappButton';
 import { Header } from './Header';
 import { AboutUs } from './AboutUs';
 import { Service } from './Service';
@@ -14,6 +14,7 @@ export const LandingPage: FC = () => (
       <AboutUs />
       <Service />
       <Location />
+      <WhatsappButton phoneNumber="605611639" />
     </Container>
   </>
 );

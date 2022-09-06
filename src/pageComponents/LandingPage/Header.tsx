@@ -44,6 +44,5 @@ export const Header: FC = () => (
         <Button variant="contained">EMPIEZA</Button>
       </Link>
     </StyledHeaderTitleWrapper>
-
   </StyledHeader>
 );
