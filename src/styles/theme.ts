@@ -18,6 +18,16 @@ const theme = createTheme({
       secondary: '#fff',
     },
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: (themeParam) => `
+        a{
+            color: inherit !important;
+            text-decoration-color:inherit !important;
+        }
+      `,
+    },
+  },
 });
 
 export default theme;

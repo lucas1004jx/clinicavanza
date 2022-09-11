@@ -1,23 +1,37 @@
 import { Link, Typography } from '@mui/material';
 import { ComponentPropsBase } from 'models/baseProps';
 import { FC } from 'react';
-import { StyledFooter } from './Footer.styled';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import { StyledFooter, StyledSocialMediaWrapper } from './Footer.styled';
 
 export const Footer:FC<ComponentPropsBase> = ({ className }) => {
   const href = 'mailTo:clinicavanza@gmail.com';
   return (
     <StyledFooter className={className}>
-      <Typography>Horario: L - V De 10:00 A 20:00</Typography>
+      <Typography>Horario: L-V De 10:00 A 20:00</Typography>
       <Typography>
         Email:
-        <Link href={href} color="inherit">info@centroavanza.net</Link>
+        <Link href={href}>info@centroavanza.net</Link>
       </Typography>
       <Typography>
-        Tel:983 403 450
+        Tel:
+        <Link href="tel:983403450">
+          983 403 450
+        </Link>
       </Typography>
       <Typography>
-        Movil:605 611 639
+        Movil:
+        <Link href="tel:605611639">
+          605 611 639
+        </Link>
       </Typography>
+      <StyledSocialMediaWrapper>
+        <Link href="https://www.instagram.com/centro.avanza/" target="_blank">
+          <InstagramIcon />
+        </Link>
+        <FacebookIcon />
+      </StyledSocialMediaWrapper>
     </StyledFooter>
   );
 };

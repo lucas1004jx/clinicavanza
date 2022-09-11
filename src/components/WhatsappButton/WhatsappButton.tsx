@@ -25,5 +25,3 @@ export const WhatsappButton:FC<Props> = ({ phoneNumber }) => {
     </StyledWhatsappButton>
   );
 };
-
-//  href="//api.whatsapp.com/send?phone=91MOBILE_NUMBER&text=WHATEVER_LINK_OR_TEXT_YOU_WANT_TO_SEND"
