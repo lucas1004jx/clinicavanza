@@ -3,7 +3,7 @@ import { ComponentPropsBase } from 'models/baseProps';
 import { FC } from 'react';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import { StyledFooter, StyledSocialMediaWrapper } from './Footer.styled';
+import { StyledFooter, StyledSocialMediaWrapper, StyledImage } from './Footer.styled';
 
 export const Footer:FC<ComponentPropsBase> = ({ className }) => {
   const href = 'mailTo:clinicavanza@gmail.com';
@@ -32,6 +32,9 @@ export const Footer:FC<ComponentPropsBase> = ({ className }) => {
         </Link>
         <FacebookIcon />
       </StyledSocialMediaWrapper>
+      <Link href="/">
+        <StyledImage src="/logo.png" alt="logo" />
+      </Link>
     </StyledFooter>
   );
 };

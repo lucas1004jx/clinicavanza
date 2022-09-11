@@ -16,3 +16,7 @@ export const StyledSocialMediaWrapper = styled('div')({
   display: 'flex',
   gap: theme.spacing(1),
 });
+
+export const StyledImage = styled('img')({
+  width: '200px',
+});
