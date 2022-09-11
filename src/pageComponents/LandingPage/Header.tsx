@@ -2,6 +2,7 @@ import { Button, Typography } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import { FC } from 'react';
 import Link from 'next/link';
+import { ContactButton } from 'components/ContactButton';
 import {
   StyledCheckPoint,
   StyledCheckPointWrapper,
@@ -40,9 +41,7 @@ export const Header: FC = () => (
         </Typography>
       </StyledHeaderMainTitle>
       <CheckPoints />
-      <Link href="/inicial">
-        <Button variant="contained">EMPIEZA</Button>
-      </Link>
+      <ContactButton />
     </StyledHeaderTitleWrapper>
   </StyledHeader>
 );
