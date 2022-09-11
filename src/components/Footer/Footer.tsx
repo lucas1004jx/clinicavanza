@@ -3,6 +3,7 @@ import { ComponentPropsBase } from 'models/baseProps';
 import { FC } from 'react';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import { CheckPoints } from 'components/CheckPoints';
 import { StyledFooter, StyledSocialMediaWrapper, StyledImage } from './Footer.styled';
 
 export const Footer:FC<ComponentPropsBase> = ({ className }) => {
@@ -26,6 +27,7 @@ export const Footer:FC<ComponentPropsBase> = ({ className }) => {
           605 611 639
         </Link>
       </Typography>
+
       <StyledSocialMediaWrapper>
         <Link href="https://www.instagram.com/centro.avanza/" target="_blank">
           <InstagramIcon />
@@ -35,6 +37,7 @@ export const Footer:FC<ComponentPropsBase> = ({ className }) => {
       <Link href="/">
         <StyledImage src="/logo.png" alt="logo" />
       </Link>
+      <CheckPoints />
     </StyledFooter>
   );
 };

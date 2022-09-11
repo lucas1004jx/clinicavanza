@@ -1,7 +1,8 @@
 import {
-  Box, Button, Modal, Typography,
+  Button, Modal, Typography,
 } from '@mui/material';
 import { FormBuilder } from 'components/FormBuilder';
+import { ComponentPropsBase } from 'models/baseProps';
 import { FC, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { sendEmail } from 'utils/sendEmail';
@@ -10,7 +11,7 @@ import { contactDataConfig } from './formConfigs';
 
 const FORM_ID = 'form-contact';
 
-export const ContactButton:FC = () => {
+export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -22,7 +23,7 @@ export const ContactButton:FC = () => {
     sendEmail(formRef);
   };
   return (
-    <div>
+    <div className={className}>
       <Button onClick={handleOpen} variant="contained">Contactar</Button>
       <Modal
         open={open}
