@@ -9,7 +9,7 @@ import {
 export const TopBar: FC = () => (
   <StyledAppBar>
     <Link href="/">
-      <StyledImage src="/logo.png" alt="logo" />
+      <StyledImage src="/images/logo.png" alt="logo" />
     </Link>
 
     <Typography>ES HORA DE CAMBIAR</Typography>

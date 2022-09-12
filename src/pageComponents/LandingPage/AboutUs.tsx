@@ -9,7 +9,7 @@ export const AboutUs:FC = () => (
     <StyledTitle fontWeight="lighter">BIENVENIDO A</StyledTitle>
     <StyledTitle gutterBottom>CLINICA AVANZA</StyledTitle>
     <StyledMediaWrapper>
-      <StyledImg src="/aboutUs.png" alt="about us" />
+      <StyledImg src="/images/aboutUs.png" alt="about us" />
     </StyledMediaWrapper>
 
     <Typography>
