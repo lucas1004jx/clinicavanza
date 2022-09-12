@@ -2,7 +2,7 @@ import {
   Button, Modal, Typography,
 } from '@mui/material';
 import { FormBuilder } from 'components/FormBuilder';
-import { ComponentPropsBase } from 'models/baseProps';
+import { ComponentPropsBase } from 'models/baseProps.model';
 import { FC, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { sendEmail } from 'utils/sendEmail';

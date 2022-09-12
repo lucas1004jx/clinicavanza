@@ -13,7 +13,7 @@ export const StyledHeader = styled('div')({
   height: '240px',
   position: 'relative',
   padding: theme.spacing(2),
-  background: 'url(logo.png) no-repeat center center',
+  background: 'url(/images/logo.png) no-repeat center center',
   backgroundSize: 'contain',
 });
 
@@ -31,12 +31,16 @@ export const StyledContactButton = styled(ContactButton)({
 
 export const StyledSection = styled(Paper)({
   margin: theme.spacing(3, 0),
+ 
+});
+
+export const StyledSectionTextWrapper = styled('div')({
   padding: theme.spacing(1.5),
 });
 
+
 export const StyledMediaWrapper = styled('div')({
-  marginLeft: theme.spacing(-1.5),
-  marginRight: theme.spacing(-1.5),
+  
 });
 
 export const StyledImg = styled('img')({

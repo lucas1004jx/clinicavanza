@@ -1,5 +1,5 @@
 import { Link, Typography } from '@mui/material';
-import { ComponentPropsBase } from 'models/baseProps';
+import { ComponentPropsBase } from 'models/baseProps.model';
 import { FC } from 'react';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -35,7 +35,7 @@ export const Footer:FC<ComponentPropsBase> = ({ className }) => {
         <FacebookIcon />
       </StyledSocialMediaWrapper>
       <Link href="/">
-        <StyledImage src="/logo.png" alt="logo" />
+        <StyledImage src="/images/logo.png" alt="logo" />
       </Link>
       <CheckPoints />
     </StyledFooter>

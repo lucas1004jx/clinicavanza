@@ -2,7 +2,7 @@ import { FormConfig } from 'components/FormBuilder/FormBuilder.model';
 import {
   GoalDataField,
   HabitDataField, PathologiesDataField, PersonalDataField, RelatedDataField,
-} from 'models/form';
+} from 'models/form.model';
 
 export const personalDataConfigs:FormConfig<PersonalDataField>[] = [
   {
