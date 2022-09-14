@@ -3,28 +3,49 @@ export type PersonalDataField =
 | 'age'
 | 'initial_weight'
 | 'height'
-| 'blood_group'
 | 'email'
 | 'phone_number'
 | 'city'
 | 'ins_handler'
 | 'consent'
 
-export type PathologiesDataField = 'allergy'
-
-export type HabitDataField =
+export type DietDataField =
 | 'intolerance'
 | 'least_favorite_food'
 | 'favorite_food'
 | 'food_schedule'
 | 'getup_time'
-| 'bed_time'
 | 'job_description'
 | 'gym_time'
 | 'training_duration'
 | 'training_frecuency'
 | 'supplementation'
-| 'current_food_habit'
+
+export type IntestinalDataField =
+| 'haveConstipation'
+| 'haveFecesOdor'
+| 'haveDigestionProblem'
+| 'haveGastritis'
+| 'haveIntestinalPain'
+| 'havePeriodPain'
+| 'isChilySentitive'
+| 'haveLiquidRetention'
+| 'haveNausea'
+| 'haveSleepProblem'
+| 'isTiredGetup'
+| 'haveProcessedFoodDaily'
+| 'haveCramps'
+| 'haveBellyFat'
+| 'canTellHungerOrAnxiety'
+| 'haveHeadacheAfterMeal'
+| 'haveNeedOfSweet'
+| 'eatForBoring'
+| 'isHungryEvery3Hours'
+| 'takeMedication'
+
+export type CurrentFoodHabitDataField = 'current_food_habit'
+
+export type PathologiesDataField = 'allergy'
 
 export type RelatedDataField = 'relatedData'
 

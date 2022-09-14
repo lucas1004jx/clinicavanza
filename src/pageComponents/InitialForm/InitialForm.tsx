@@ -9,7 +9,7 @@ import { useForm } from 'react-hook-form';
 import { sendEmail } from 'utils/sendEmail';
 import {
   goalDataCofigs,
-  habitDataConfigs, pathologiesDataConfigs, personalDataConfigs, relatedDataCofigs,
+  currentFoodHabitDataConfigs, pathologiesDataConfigs, personalDataConfigs, relatedDataCofigs,
 } from './formConfigs';
 import { StyledButtonWrapper, StyledContainer } from './InitialForm.styled';
 
@@ -28,7 +28,7 @@ export const InitialForm = () => {
       <form onSubmit={handleSubmit(onSubmit)} id="my-form" ref={formRef}>
         <Accordion title="Datos personales" content={<FormBuilder configs={personalDataConfigs} control={control} />} defaultExpanded />
         <Accordion title="Patología" content={<FormBuilder configs={pathologiesDataConfigs} control={control} />} />
-        <Accordion title="Informationció nutricional, diaria" content={<FormBuilder configs={habitDataConfigs} control={control} />} />
+        <Accordion title="Informationció nutricional, diaria" content={<FormBuilder configs={currentFoodHabitDataConfigs} control={control} />} />
         <Accordion title="Datos relacionados" content={<FormBuilder configs={relatedDataCofigs} control={control} />} />
         <Accordion title="Objectivo" content={<FormBuilder configs={goalDataCofigs} control={control} />} />
       </form>

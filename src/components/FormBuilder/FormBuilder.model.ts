@@ -11,6 +11,7 @@ export interface CommonFormConfig<FieldName = string> {
     name:FieldName
     placeholder?:string
     fieldName:string
+    required?:boolean
 }
 export interface InputFieldConfig<FieldName = string> extends CommonFormConfig<FieldName>{
     type:'input'

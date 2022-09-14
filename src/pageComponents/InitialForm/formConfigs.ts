@@ -1,7 +1,11 @@
 import { FormConfig } from 'components/FormBuilder/FormBuilder.model';
 import {
+  CurrentFoodHabitDataField,
+  DietDataField,
   GoalDataField,
-  HabitDataField, PathologiesDataField, PersonalDataField, RelatedDataField,
+  PathologiesDataField,
+  PersonalDataField,
+  RelatedDataField,
 } from 'models/form.model';
 
 export const personalDataConfigs:FormConfig<PersonalDataField>[] = [
@@ -9,36 +13,37 @@ export const personalDataConfigs:FormConfig<PersonalDataField>[] = [
     type: 'input',
     name: 'user_name',
     fieldName: 'Nombre y appellido',
+    required: true,
   },
   {
     type: 'input',
     name: 'age',
     fieldName: 'Edad',
+    required: true,
   },
   {
     type: 'input',
     name: 'initial_weight',
     fieldName: 'Peso inicial(en ayunas)',
+    required: true,
   },
   {
     type: 'input',
     name: 'height',
     fieldName: 'Altura',
-  },
-  {
-    type: 'input',
-    name: 'blood_group',
-    fieldName: 'Group sanguíneo',
+    required: true,
   },
   {
     type: 'input',
     name: 'email',
     fieldName: 'Email',
+    required: true,
   },
   {
     type: 'input',
     name: 'phone_number',
     fieldName: 'Teléfono',
+    required: true,
   },
   {
     type: 'input',
@@ -53,7 +58,7 @@ export const personalDataConfigs:FormConfig<PersonalDataField>[] = [
   {
     type: 'select',
     name: 'consent',
-    fieldName: 'Consentimiento a promocionar tu imagen en redes sociales.',
+    fieldName: 'Rodea para dar tu consentimiento a promocionar tu imagen en RRSS o no',
     options: [
       {
         id: 'sí',
@@ -68,22 +73,16 @@ export const personalDataConfigs:FormConfig<PersonalDataField>[] = [
         name: 'Sí, pero ocultando mi identidad',
       },
     ],
+    required: true,
   },
 ];
 
-export const pathologiesDataConfigs:FormConfig<PathologiesDataField>[] = [
-  {
-    type: 'textArea',
-    name: 'allergy',
-    fieldName: 'Alergias, enfermedades patológicas conocidas',
-  },
-];
-
-export const habitDataConfigs:FormConfig<HabitDataField>[] = [
+export const DietDataConfigs:FormConfig<DietDataField>[] = [
   {
     type: 'textArea',
     name: 'intolerance',
     fieldName: 'Intolerancias o alergias',
+    required: true,
   },
   {
     type: 'textArea',
@@ -131,21 +130,19 @@ export const habitDataConfigs:FormConfig<HabitDataField>[] = [
     type: 'textArea',
     name: 'getup_time',
     fieldName: 'Hora a la que te sueles levantar',
-  },
-  {
-    type: 'textArea',
-    name: 'bed_time',
-    fieldName: 'Hora a la que te sueles acostar',
+    required: true,
   },
   {
     type: 'textArea',
     name: 'job_description',
     fieldName: 'Descripción de tu trabajo',
+    required: true,
   },
   {
     type: 'textArea',
     name: 'gym_time',
     fieldName: 'Hora a la que vas al GYM',
+    required: true,
   },
   {
     type: 'textArea',
@@ -156,16 +153,30 @@ export const habitDataConfigs:FormConfig<HabitDataField>[] = [
     type: 'textArea',
     name: 'training_frecuency',
     fieldName: 'Días a la semana de Entreno',
+    required: true,
   },
   {
     type: 'textArea',
     name: 'supplementation',
     fieldName: 'Suplementación ACTUAL (si usas)',
   },
+];
+
+export const pathologiesDataConfigs:FormConfig<PathologiesDataField>[] = [
+  {
+    type: 'textArea',
+    name: 'allergy',
+    fieldName: 'Alergias, enfermedades patológicas conocidas',
+    required: true,
+  },
+];
+
+export const currentFoodHabitDataConfigs:FormConfig<CurrentFoodHabitDataField>[] = [
   {
     type: 'textArea',
     name: 'current_food_habit',
     fieldName: 'Descríbeme lo que sueles comer actualmente un día cualquiera',
+    required: true,
   },
 ];
 
@@ -182,5 +193,6 @@ export const goalDataCofigs:FormConfig<GoalDataField>[] = [
     type: 'textArea',
     name: 'goal',
     fieldName: 'Qué objetivo tienes',
+    required: true,
   },
 ];
