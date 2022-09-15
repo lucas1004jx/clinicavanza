@@ -31,3 +31,12 @@ export interface FormBuilderProps {
     configs:FormConfig[]
     control:Control
 }
+
+export interface FieldNameProps {
+    name:string
+    required?:boolean
+}
+
+export interface StyleProps {
+ required?:boolean
+}

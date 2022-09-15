@@ -1,7 +1,6 @@
 import { FormConfig } from 'components/FormBuilder/FormBuilder.model';
 import {
-  GoalDataField,
-  HabitDataField, PathologiesDataField, PersonalDataField, RelatedDataField,
+  PersonalDataField,
 } from 'models/form.model';
 
 export const contactDataConfig:FormConfig<PersonalDataField>[] = [
@@ -9,16 +8,19 @@ export const contactDataConfig:FormConfig<PersonalDataField>[] = [
     type: 'input',
     name: 'user_name',
     fieldName: 'Nombre y appellido',
+    required: true,
   },
   {
     type: 'input',
     name: 'email',
     fieldName: 'Email',
+    required: true,
   },
   {
     type: 'input',
     name: 'phone_number',
     fieldName: 'Teléfono',
+    required: true,
   },
   {
     type: 'input',

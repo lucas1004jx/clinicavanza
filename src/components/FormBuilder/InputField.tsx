@@ -2,7 +2,7 @@ import { TextField, Typography } from '@mui/material';
 import { FC } from 'react';
 import { Controller, Control } from 'react-hook-form';
 import { InputFieldConfig } from './FormBuilder.model';
-import { StyledFieldWrapper } from './FormBuilder.styled';
+import { StyledFieldName, StyledFieldWrapper } from './FormBuilder.styled';
 
 interface Props extends Omit<InputFieldConfig, 'type'> {
     control:Control
@@ -11,12 +11,12 @@ interface Props extends Omit<InputFieldConfig, 'type'> {
 }
 
 export const InputField:FC<Props> = ({
-  control, name, placeholder, fieldName, multiline, rows = 4,
+  control, name, placeholder, fieldName, multiline, rows = 4, required,
 }) => (
   <StyledFieldWrapper>
-    <Typography>
+    <StyledFieldName required={required}>
       {fieldName}
-    </Typography>
+    </StyledFieldName>
     <Controller
       name={name}
       control={control}

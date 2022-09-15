@@ -2,19 +2,19 @@ import { MenuItem, Typography, Select } from '@mui/material';
 import { FC } from 'react';
 import { Control, Controller } from 'react-hook-form';
 import { SelectFieldConfig } from './FormBuilder.model';
-import { StyledFieldWrapper } from './FormBuilder.styled';
+import { StyledFieldName, StyledFieldWrapper } from './FormBuilder.styled';
 
 interface Props extends SelectFieldConfig {
     control:Control
 }
 
 export const SelectField:FC<Props> = ({
-  fieldName, control, name, options,
+  fieldName, control, name, options, required,
 }) => (
   <StyledFieldWrapper>
-    <Typography>
+    <StyledFieldName required>
       {fieldName}
-    </Typography>
+    </StyledFieldName>
     <Controller
       name={name}
       control={control}
