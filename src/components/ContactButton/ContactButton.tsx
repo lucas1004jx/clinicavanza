@@ -1,7 +1,10 @@
 import {
   Button, Modal, Typography,
 } from '@mui/material';
+import LoadingButton from '@mui/lab/LoadingButton';
+import SendIcon from '@mui/icons-material/Send';
 import { FormBuilder } from 'components/FormBuilder';
+import { CONTACT_FORM_TEMPLATE_ID } from 'constants/email';
 import { ComponentPropsBase } from 'models/baseProps.model';
 import { FC, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -13,6 +16,7 @@ const FORM_ID = 'form-contact';
 
 export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
   const [open, setOpen] = useState(false);
+  const [isLoaidng, setIsLoading] = useState(false);
 
   const {
     control, handleSubmit, formState: { errors }, reset,
@@ -25,9 +29,15 @@ export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
     setOpen(false);
   };
 
-  const onSubmit = (data:any) => {
-    console.log('data--->', data);
-    // sendEmail(formRef);
+  const onSubmit = async () => {
+    try {
+      setIsLoading(true);
+      await sendEmail(formRef, CONTACT_FORM_TEMPLATE_ID);
+      handleClose();
+    } catch (error) {
+      setIsLoading(false);
+      console.error('sending contact foprm error', error);
+    }
   };
   return (
     <div className={className}>
@@ -47,7 +57,16 @@ export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
           </form>
           <StyledButtonWrapper>
             <Button variant="outlined" onClick={handleClose}>Cancelar</Button>
-            <Button type="submit" form={FORM_ID} variant="contained">Enviar</Button>
+            <LoadingButton
+              loading={isLoaidng}
+              loadingPosition="start"
+              startIcon={<SendIcon />}
+              type="submit"
+              form={FORM_ID}
+              variant="contained"
+            >
+              Enviar
+            </LoadingButton>
           </StyledButtonWrapper>
 
         </StyledBox>
