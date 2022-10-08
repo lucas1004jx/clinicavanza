@@ -34,6 +34,7 @@ export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
       setIsLoading(true);
       await sendEmail(formRef, CONTACT_FORM_TEMPLATE_ID);
       handleClose();
+      setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
       console.error('sending contact foprm error', error);
