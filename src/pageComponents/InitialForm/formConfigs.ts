@@ -1,8 +1,10 @@
 import { FormConfig } from 'components/FormBuilder/FormBuilder.model';
+import { YES_NO_OPTION } from 'constants/form';
 import {
   CurrentFoodHabitDataField,
   DietDataField,
   GoalDataField,
+  IntestinalDataField,
   PathologiesDataField,
   PersonalDataField,
   RelatedDataField,
@@ -13,37 +15,37 @@ export const personalDataConfigs:FormConfig<PersonalDataField>[] = [
     type: 'input',
     name: 'user_name',
     fieldName: 'Nombre y appellido',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'input',
     name: 'age',
     fieldName: 'Edad',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'input',
     name: 'initial_weight',
     fieldName: 'Peso inicial(en ayunas)',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'input',
     name: 'height',
     fieldName: 'Altura',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'input',
     name: 'email',
     fieldName: 'Email',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'input',
     name: 'phone_number',
     fieldName: 'Teléfono',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'input',
@@ -60,20 +62,13 @@ export const personalDataConfigs:FormConfig<PersonalDataField>[] = [
     name: 'consent',
     fieldName: 'Rodea para dar tu consentimiento a promocionar tu imagen en RRSS o no',
     options: [
-      {
-        id: 'sí',
-        name: 'sí',
-      },
-      {
-        id: 'no',
-        name: 'no',
-      },
+      ...YES_NO_OPTION,
       {
         id: 'Sí, pero ocultando mi identidad',
         name: 'Sí, pero ocultando mi identidad',
       },
     ],
-    required: true,
+    rules: { required: true },
   },
 ];
 
@@ -82,7 +77,7 @@ export const DietDataConfigs:FormConfig<DietDataField>[] = [
     type: 'textArea',
     name: 'intolerance',
     fieldName: 'Intolerancias o alergias',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'textArea',
@@ -130,19 +125,19 @@ export const DietDataConfigs:FormConfig<DietDataField>[] = [
     type: 'textArea',
     name: 'getup_time',
     fieldName: 'Hora a la que te sueles levantar',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'textArea',
     name: 'job_description',
     fieldName: 'Descripción de tu trabajo',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'textArea',
     name: 'gym_time',
     fieldName: 'Hora a la que vas al GYM',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'textArea',
@@ -153,7 +148,7 @@ export const DietDataConfigs:FormConfig<DietDataField>[] = [
     type: 'textArea',
     name: 'training_frecuency',
     fieldName: 'Días a la semana de Entreno',
-    required: true,
+    rules: { required: true },
   },
   {
     type: 'textArea',
@@ -162,12 +157,147 @@ export const DietDataConfigs:FormConfig<DietDataField>[] = [
   },
 ];
 
+export const IntestinalDataConfig :FormConfig<IntestinalDataField>[] = [
+  {
+    type: 'select',
+    name: 'haveConstipation',
+    fieldName: 'Estreñimiento o tiene q hacer esfuerzos para defecar o episodios de diarrea',
+    options: YES_NO_OPTION,
+    rules: { required: true },
+  },
+  {
+    type: 'select',
+    name: 'haveFecesOdor',
+    fieldName: 'olor muy fuerte en sus heces,  ¿ flotan',
+    options: YES_NO_OPTION,
+  },
+  {
+    type: 'select',
+    name: 'haveDigestionProblem',
+    fieldName: '¿Tiene digestiones lentas o se hincha despues de comer o tiene gases? ',
+    options: YES_NO_OPTION,
+    rules: { required: true },
+  },
+  {
+    type: 'select',
+    name: 'haveGastritis',
+    fieldName: '¿Tiene gastritis ó reflujo o necesita tomar antiácidos (omeoprazol…raditidina)? ',
+    options: YES_NO_OPTION,
+    rules: { required: true },
+  },
+  {
+    type: 'select',
+    name: 'haveIntestinalPain',
+    fieldName: '¿Sufre dolor abdominal ,o intestinal o suele tener gases?',
+    options: YES_NO_OPTION,
+    rules: { required: true },
+  },
+  {
+    type: 'select',
+    name: 'havePeriodPain',
+    fieldName: '¿Dolor menstural o menstruacion irregular?',
+    options: YES_NO_OPTION,
+
+  },
+  {
+    type: 'select',
+    name: 'isChilySentitive',
+    fieldName: '¿Es friolero, cabello fragil o piel resca?',
+    options: YES_NO_OPTION,
+  },
+  {
+    type: 'select',
+    name: 'haveLiquidRetention',
+    fieldName: '¿Nota retencion de liquidos o cara / manos hinchadas por las mañanas?',
+    options: YES_NO_OPTION,
+  },
+
+  {
+    type: 'select',
+    name: 'haveNausea',
+    fieldName: '¿Tiene regularmente mareos o nauseas?',
+    options: YES_NO_OPTION,
+    rules: { required: true },
+  },
+  {
+    type: 'select',
+    name: 'haveSleepProblem',
+    fieldName: '¿Tiene problemas de sueño, se despierta de madruagada , duerme poco o le cuesta dormirse?',
+    options: YES_NO_OPTION,
+
+  },
+  {
+    type: 'select',
+    name: 'isTiredGetup',
+    fieldName: '¿Te levantas cansado? se nota con poca energía durante el dia?',
+    options: YES_NO_OPTION,
+
+  },
+  {
+    type: 'select',
+    name: 'haveProcessedFoodDaily',
+    fieldName: '¿Consume procesados a diario?',
+    options: YES_NO_OPTION,
+    rules: { required: true },
+  },
+  {
+    type: 'select',
+    name: 'haveCramps',
+    fieldName: '¿Suele tener calambres , agujetas o tendinitis?',
+    options: YES_NO_OPTION,
+  },
+  {
+    type: 'select',
+    name: 'haveBellyFat',
+    fieldName: '¿Tiene grasa localizada en el abdomen dificil de perder?',
+    options: YES_NO_OPTION,
+  },
+  {
+    type: 'select',
+    name: 'canTellHungerOrAnxiety',
+    fieldName: '¿Sabe diferenciar el hambre de la ansiedad?',
+    options: YES_NO_OPTION,
+    rules: { required: true },
+  },
+  {
+    type: 'select',
+    name: 'haveHeadacheAfterMeal',
+    fieldName: '¿Tiene dolores de cabeza despues de comer?',
+    options: YES_NO_OPTION,
+  },
+  {
+    type: 'select',
+    name: 'haveNeedOfSweet',
+    fieldName: '¿Tiene la necesidad de productos azucarados?',
+    options: YES_NO_OPTION,
+  },
+  {
+    type: 'select',
+    name: 'eatForBoring',
+    fieldName: '¿Cree q come por aburrimiento?',
+    options: YES_NO_OPTION,
+  },
+  {
+    type: 'select',
+    name: 'isHungryEvery3Hours',
+    fieldName: '¿Tiene hambre cada 3 horas?',
+    options: YES_NO_OPTION,
+    rules: { required: true },
+  },
+  {
+    type: 'select',
+    name: 'takeMedication',
+    fieldName: '¿Tomas alguna medicación?',
+    options: YES_NO_OPTION,
+  },
+];
+
 export const pathologiesDataConfigs:FormConfig<PathologiesDataField>[] = [
   {
     type: 'textArea',
     name: 'allergy',
     fieldName: 'Alergias, enfermedades patológicas conocidas',
-    required: true,
+    rules: { required: true },
   },
 ];
 
@@ -176,7 +306,7 @@ export const currentFoodHabitDataConfigs:FormConfig<CurrentFoodHabitDataField>[]
     type: 'textArea',
     name: 'current_food_habit',
     fieldName: 'Descríbeme lo que sueles comer actualmente un día cualquiera',
-    required: true,
+    rules: { required: true },
   },
 ];
 
@@ -193,6 +323,6 @@ export const goalDataCofigs:FormConfig<GoalDataField>[] = [
     type: 'textArea',
     name: 'goal',
     fieldName: 'Qué objetivo tienes',
-    required: true,
+    rules: { required: true },
   },
 ];

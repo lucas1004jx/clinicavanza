@@ -10,7 +10,7 @@ import { sendEmail } from 'utils/sendEmail';
 import { INITIAL_FORM_TEMPLATE_ID } from 'constants/email';
 import {
   goalDataCofigs,
-  currentFoodHabitDataConfigs, pathologiesDataConfigs, personalDataConfigs, relatedDataCofigs,
+  currentFoodHabitDataConfigs, pathologiesDataConfigs, personalDataConfigs, relatedDataCofigs, IntestinalDataConfig,
 } from './formConfigs';
 import { StyledButtonWrapper, StyledContainer } from './InitialForm.styled';
 
@@ -28,6 +28,7 @@ export const InitialForm = () => {
     <StyledContainer>
       <form onSubmit={handleSubmit(onSubmit)} id="my-form" ref={formRef}>
         <Accordion title="Datos personales" content={<FormBuilder configs={personalDataConfigs} control={control} errors={errors} />} defaultExpanded />
+        <Accordion title="Diario Intestinal" content={<FormBuilder configs={IntestinalDataConfig} control={control} errors={errors} />} defaultExpanded />
         <Accordion title="Patología" content={<FormBuilder configs={pathologiesDataConfigs} control={control} errors={errors} />} />
         <Accordion title="Informationció nutricional, diaria" content={<FormBuilder configs={currentFoodHabitDataConfigs} control={control} errors={errors} />} />
         <Accordion title="Datos relacionados" content={<FormBuilder configs={relatedDataCofigs} control={control} errors={errors} />} />
