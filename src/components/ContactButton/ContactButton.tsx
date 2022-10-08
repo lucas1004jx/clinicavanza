@@ -13,14 +13,21 @@ const FORM_ID = 'form-contact';
 
 export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  const { control, handleSubmit } = useForm();
+
+  const {
+    control, handleSubmit, formState: { errors }, reset,
+  } = useForm();
   const formRef = useRef<HTMLFormElement>(null);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    reset({});
+    setOpen(false);
+  };
 
   const onSubmit = (data:any) => {
     console.log('data--->', data);
-    sendEmail(formRef);
+    // sendEmail(formRef);
   };
   return (
     <div className={className}>
@@ -36,7 +43,7 @@ export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
             Contáctanos!
           </Typography>
           <form onSubmit={handleSubmit(onSubmit)} id={FORM_ID} ref={formRef}>
-            <FormBuilder configs={contactDataConfig} control={control} />
+            <FormBuilder configs={contactDataConfig} control={control} errors={errors} />
           </form>
           <StyledButtonWrapper>
             <Button variant="outlined" onClick={handleClose}>Cancelar</Button>

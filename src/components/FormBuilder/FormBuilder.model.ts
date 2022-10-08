@@ -1,4 +1,4 @@
-import { Control } from 'react-hook-form';
+import { Control, FieldErrors, RegisterOptions } from 'react-hook-form';
 
 export type FormFieldType = 'input'
 
@@ -11,7 +11,7 @@ export interface CommonFormConfig<FieldName = string> {
     name:FieldName
     placeholder?:string
     fieldName:string
-    required?:boolean
+    rules?:RegisterOptions
 }
 export interface InputFieldConfig<FieldName = string> extends CommonFormConfig<FieldName>{
     type:'input'
@@ -30,11 +30,17 @@ export type FormConfig<FieldName = string> = InputFieldConfig<FieldName> | Selec
 export interface FormBuilderProps {
     configs:FormConfig[]
     control:Control
+    errors:FieldErrors
 }
 
 export interface FieldNameProps {
     name:string
     required?:boolean
+}
+
+export interface FormFieldPropsBase {
+    hasError?:boolean
+    control:Control
 }
 
 export interface StyleProps {

@@ -8,19 +8,25 @@ export const contactDataConfig:FormConfig<PersonalDataField>[] = [
     type: 'input',
     name: 'user_name',
     fieldName: 'Nombre y appellido',
-    required: true,
+    rules: {
+      required: true,
+    },
   },
   {
     type: 'input',
     name: 'email',
     fieldName: 'Email',
-    required: true,
+    rules: {
+      required: true,
+    },
   },
   {
     type: 'input',
     name: 'phone_number',
     fieldName: 'Teléfono',
-    required: true,
+    rules: {
+      required: true,
+    },
   },
   {
     type: 'input',

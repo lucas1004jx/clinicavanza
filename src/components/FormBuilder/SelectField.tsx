@@ -1,15 +1,19 @@
-import { MenuItem, Typography, Select } from '@mui/material';
+import { MenuItem, Select } from '@mui/material';
 import { FC } from 'react';
-import { Control, Controller } from 'react-hook-form';
-import { SelectFieldConfig } from './FormBuilder.model';
+import { Controller } from 'react-hook-form';
+import { FormFieldPropsBase, SelectFieldConfig } from './FormBuilder.model';
 import { StyledFieldName, StyledFieldWrapper } from './FormBuilder.styled';
 
-interface Props extends SelectFieldConfig {
-    control:Control
+interface Props extends SelectFieldConfig, FormFieldPropsBase {
 }
 
 export const SelectField:FC<Props> = ({
-  fieldName, control, name, options, required,
+  fieldName,
+  control,
+  name,
+  options,
+  hasError,
+  rules = {},
 }) => (
   <StyledFieldWrapper>
     <StyledFieldName required>
@@ -19,9 +23,11 @@ export const SelectField:FC<Props> = ({
       name={name}
       control={control}
       defaultValue=""
+      rules={rules}
       render={({ field }) => (
         <Select
           {...field}
+          error={hasError}
           labelId="demo-simple-select-label"
           id="demo-simple-select"
         >
