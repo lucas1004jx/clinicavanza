@@ -34,9 +34,7 @@ export const Footer:FC<ComponentPropsBase> = ({ className }) => {
         </Link>
         <FacebookIcon />
       </StyledSocialMediaWrapper>
-      <Link href="/">
-        <StyledImage src="/images/logo.png" alt="logo" />
-      </Link>
+      <StyledImage src="/images/logo.png" alt="logo" />
       <CheckPoints />
     </StyledFooter>
   );

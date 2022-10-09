@@ -14,7 +14,7 @@ export const LandingPage: FC = () => (
     <Container>
       <AboutUs />
       <Service />
-      <Results />
+      {/* <Results /> */}
       <Location />
       <WhatsappButton phoneNumber="605611639" />
     </Container>
