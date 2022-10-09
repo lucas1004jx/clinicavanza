@@ -15,10 +15,10 @@ export const Service:FC = () => (
       </StyledMediaWrapper>
       <StyledSectionTextWrapper>
         <Typography>
-        Dieta...Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum...
+          Problemas gastrointestinales tales como gases, reflujo , inflamación intestinal, estreñimiento, resistencia a la insulina, amenorrea ,disbiosis, intolerancias...
         </Typography>
       </StyledSectionTextWrapper>
-      
+
     </StyledSection>
 
     <StyledSection>
@@ -26,12 +26,12 @@ export const Service:FC = () => (
       <StyledMediaWrapper>
         <StyledImg src="/images/fisio.png" alt="recupera de lesiones" />
       </StyledMediaWrapper>
- <StyledSectionTextWrapper>
- <Typography>
-        Fisio...Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum...
-      </Typography>
-</StyledSectionTextWrapper>
-     
+      <StyledSectionTextWrapper>
+        <Typography>
+          35€ / sesión .Tratamiento de lesiones musculo-esqueléticas, viscerales, deportivas con multitud de técnicas encaminadas a la disminución del dolor y recuperación del paciente.
+        </Typography>
+      </StyledSectionTextWrapper>
+
     </StyledSection>
 
     <StyledSection>
@@ -39,12 +39,12 @@ export const Service:FC = () => (
       <StyledMediaWrapper>
         <StyledImg src="/images/entreno.png" alt="entrenamiento" />
       </StyledMediaWrapper>
-<StyledSectionTextWrapper>
-<Typography>
-        Entrenamiento...Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum...
-      </Typography>
-</StyledSectionTextWrapper>
-      
+      <StyledSectionTextWrapper>
+        <Typography>
+          Entrenamiento...Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum...
+        </Typography>
+      </StyledSectionTextWrapper>
+
     </StyledSection>
 
   </>

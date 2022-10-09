@@ -10,21 +10,15 @@ export const Footer:FC<ComponentPropsBase> = ({ className }) => {
   const href = 'mailTo:clinicavanza@gmail.com';
   return (
     <StyledFooter className={className}>
-      <Typography>Horario: L-V De 10:00 A 20:00</Typography>
+      <Typography>Horario: 10-14H Y 17-20H</Typography>
       <Typography>
         Email:
         <Link href={href}>info@centroavanza.net</Link>
       </Typography>
       <Typography>
         Tel:
-        <Link href="tel:983403450">
-          983 403 450
-        </Link>
-      </Typography>
-      <Typography>
-        Movil:
-        <Link href="tel:605611639">
-          605 611 639
+        <Link href="tel:983652321">
+          983652321
         </Link>
       </Typography>
 

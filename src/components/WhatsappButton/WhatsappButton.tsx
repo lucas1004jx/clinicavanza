@@ -16,7 +16,7 @@ export const WhatsappButton:FC<Props> = ({ phoneNumber }) => {
     window.open(
       whatsappBaseUrl,
       '_blank',
-      'popup=yes',
+      'popup=no',
     );
   };
   return (

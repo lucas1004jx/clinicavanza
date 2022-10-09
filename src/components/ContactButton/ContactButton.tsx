@@ -10,7 +10,7 @@ import { FC, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { sendEmail } from 'utils/sendEmail';
 import { CONTACT_FORM_ID } from 'constants/form';
-import { StyledBox, StyledButtonWrapper } from './ContactButton.styled';
+import { StyledBox, StyledButtonWrapper, StyledWrapper } from './ContactButton.styled';
 import { contactDataConfig } from './formConfigs';
 
 export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
@@ -40,7 +40,7 @@ export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
     }
   };
   return (
-    <div className={className}>
+    <StyledWrapper className={className}>
       <Button onClick={handleOpen} variant="contained">Contactar</Button>
       <Modal
         open={open}
@@ -71,6 +71,6 @@ export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
 
         </StyledBox>
       </Modal>
-    </div>
+    </StyledWrapper>
   );
 };

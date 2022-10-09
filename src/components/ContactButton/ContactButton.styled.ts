@@ -2,6 +2,10 @@ import styled from '@emotion/styled';
 import { Box } from '@mui/material';
 import theme from 'styles/theme';
 
+export const StyledWrapper = styled('div')({
+  display: 'inline-block',
+});
+
 export const StyledBox = styled(Box)({
   position: 'absolute',
   top: '50%',

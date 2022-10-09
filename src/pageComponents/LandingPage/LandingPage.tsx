@@ -9,14 +9,12 @@ import { Location } from './Location';
 import { Results } from './Results';
 
 export const LandingPage: FC = () => (
-  <>
+  <Container>
     <Header />
-    <Container>
-      <AboutUs />
-      <Service />
-      {/* <Results /> */}
-      <Location />
-      <WhatsappButton phoneNumber="605611639" />
-    </Container>
-  </>
+    {/* <AboutUs /> */}
+    <Service />
+    {/* <Results /> */}
+    <Location />
+    <WhatsappButton phoneNumber="605611639" />
+  </Container>
 );

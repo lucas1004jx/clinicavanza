@@ -5,15 +5,9 @@ import {
 } from './LandingPage.styled';
 
 export const AboutUs:FC = () => (
-  <StyledSection>
-    <StyledTitle fontWeight="lighter">BIENVENIDO A</StyledTitle>
-    <StyledTitle gutterBottom>CLINICA AVANZA</StyledTitle>
-    <StyledMediaWrapper>
-      <StyledImg src="/images/aboutUs.png" alt="about us" />
-    </StyledMediaWrapper>
-
-    <Typography>
-      Somos...Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum...(Quien somos)
+  <StyledSection elevation={0}>
+    <Typography align="center">
+      Somos un centro de fisioterapia avanzada y nutrición , situado en La Cisterniga, Valladolid.
     </Typography>
   </StyledSection>
 );

@@ -1,20 +1,12 @@
 import {
-  Container, Paper, Typography,
+  Container, Paper, Stack, Typography,
 } from '@mui/material';
 import { styled } from '@mui/system';
 import theme from 'styles/theme';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
 
-export const StyledContainer = styled(Container)({
-
-});
-
-export const StyledHeader = styled('div')({
-  height: '240px',
-  position: 'relative',
-  padding: theme.spacing(2),
-  background: 'url(/images/logo.png) no-repeat center center',
-  backgroundSize: 'contain',
+export const StyledHeader = styled(Stack)({
+  margin: theme.spacing(3, 0),
 });
 
 export const StyledTitle = styled(Typography)({
@@ -23,24 +15,20 @@ export const StyledTitle = styled(Typography)({
 });
 
 export const StyledContactButton = styled(ContactButton)({
-  position: 'absolute',
-  bottom: 0,
-  left: '50%',
-  transform: 'translateX(-50%)',
+  textAlign: 'center',
 });
 
 export const StyledSection = styled(Paper)({
   margin: theme.spacing(3, 0),
- 
+
 });
 
 export const StyledSectionTextWrapper = styled('div')({
   padding: theme.spacing(1.5),
 });
 
-
 export const StyledMediaWrapper = styled('div')({
-  
+
 });
 
 export const StyledImg = styled('img')({
