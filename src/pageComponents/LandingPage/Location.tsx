@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import { FC } from 'react';
 import {
-  StyledMap, StyledMediaWrapper, StyledSection, StyledTitle,
+  StyledMap, StyledMediaWrapper, StyledSection, StyledSectionTextWrapper, StyledTitle,
 } from './LandingPage.styled';
 
 export const Location:FC = () => (
@@ -16,13 +16,14 @@ export const Location:FC = () => (
         referrerPolicy="no-referrer-when-downgrade"
       />
     </StyledMediaWrapper>
-
-    <Typography>
-      Calle San Cristóbal, 5
-      <br />
-      La Cisterniga
-      <br />
-      Valldadoid
-    </Typography>
+    <StyledSectionTextWrapper>
+      <Typography>
+        Calle San Cristóbal, 5
+        <br />
+        La Cisterniga
+        <br />
+        Valldadoid
+      </Typography>
+    </StyledSectionTextWrapper>
   </StyledSection>
 );

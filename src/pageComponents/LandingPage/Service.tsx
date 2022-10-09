@@ -41,7 +41,7 @@ export const Service:FC = () => (
       </StyledMediaWrapper>
       <StyledSectionTextWrapper>
         <Typography>
-          Entrenamiento...Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum...
+          ASESORAMIENTO DEPORTIVO
         </Typography>
       </StyledSectionTextWrapper>
 

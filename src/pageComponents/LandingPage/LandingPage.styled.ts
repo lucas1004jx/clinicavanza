@@ -6,7 +6,7 @@ import theme from 'styles/theme';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
 
 export const StyledHeader = styled(Stack)({
-  margin: theme.spacing(3, 0),
+  marginBottom: theme.spacing(3),
 });
 
 export const StyledTitle = styled(Typography)({
@@ -20,7 +20,6 @@ export const StyledContactButton = styled(ContactButton)({
 
 export const StyledSection = styled(Paper)({
   margin: theme.spacing(3, 0),
-
 });
 
 export const StyledSectionTextWrapper = styled('div')({
@@ -34,6 +33,12 @@ export const StyledMediaWrapper = styled('div')({
 export const StyledImg = styled('img')({
   width: '100%',
   height: '100%',
+  objectFit: 'cover',
+});
+
+export const StyledLogo = styled('img')({
+  width: '100%',
+  height: '80px',
   objectFit: 'cover',
 });
 
