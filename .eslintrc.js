@@ -3,6 +3,10 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  globals: {
+    React: true,
+    JSX: true,
+  },
   extends: [
     'next/core-web-vitals',
     'plugin:react/recommended',

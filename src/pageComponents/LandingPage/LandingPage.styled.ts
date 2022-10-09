@@ -6,7 +6,7 @@ import theme from 'styles/theme';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
 
 export const StyledHeader = styled(Stack)({
-  marginBottom: theme.spacing(3),
+  margin: theme.spacing(3, 0),
 });
 
 export const StyledTitle = styled(Typography)({
@@ -20,6 +20,7 @@ export const StyledContactButton = styled(ContactButton)({
 
 export const StyledSection = styled(Paper)({
   margin: theme.spacing(3, 0),
+
 });
 
 export const StyledSectionTextWrapper = styled('div')({
