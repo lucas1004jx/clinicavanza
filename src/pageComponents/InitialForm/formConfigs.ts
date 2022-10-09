@@ -26,13 +26,13 @@ export const personalDataConfigs:FormConfig<PersonalDataField>[] = [
   {
     type: 'input',
     name: 'initial_weight',
-    fieldName: 'Peso inicial(en ayunas)',
+    fieldName: 'Peso inicial(en ayunas)(kg)',
     rules: { required: true },
   },
   {
     type: 'input',
     name: 'height',
-    fieldName: 'Altura',
+    fieldName: 'Altura(cm)',
     rules: { required: true },
   },
   {
@@ -72,7 +72,7 @@ export const personalDataConfigs:FormConfig<PersonalDataField>[] = [
   },
 ];
 
-export const DietDataConfigs:FormConfig<DietDataField>[] = [
+export const dietDataConfigs:FormConfig<DietDataField>[] = [
   {
     type: 'textArea',
     name: 'intolerance',
@@ -157,18 +157,18 @@ export const DietDataConfigs:FormConfig<DietDataField>[] = [
   },
 ];
 
-export const IntestinalDataConfig :FormConfig<IntestinalDataField>[] = [
+export const intestinalDataConfigs :FormConfig<IntestinalDataField>[] = [
   {
     type: 'select',
     name: 'haveConstipation',
-    fieldName: 'Estreñimiento o tiene q hacer esfuerzos para defecar o episodios de diarrea',
+    fieldName: '¿Estreñimiento o tiene q hacer esfuerzos para defecar o episodios de diarrea?',
     options: YES_NO_OPTION,
     rules: { required: true },
   },
   {
     type: 'select',
     name: 'haveFecesOdor',
-    fieldName: 'olor muy fuerte en sus heces,  ¿ flotan',
+    fieldName: 'Olor muy fuerte en sus heces,  ¿flotan?',
     options: YES_NO_OPTION,
   },
   {
@@ -285,18 +285,17 @@ export const IntestinalDataConfig :FormConfig<IntestinalDataField>[] = [
     rules: { required: true },
   },
   {
-    type: 'select',
+    type: 'textArea',
     name: 'takeMedication',
-    fieldName: '¿Tomas alguna medicación?',
-    options: YES_NO_OPTION,
+    fieldName: '¿Tomas alguna medicación? Descríbelo:',
   },
 ];
 
 export const pathologiesDataConfigs:FormConfig<PathologiesDataField>[] = [
   {
     type: 'textArea',
-    name: 'allergy',
-    fieldName: 'Alergias, enfermedades patológicas conocidas',
+    name: 'pathologies',
+    fieldName: 'Patologías, alergias , enfermedades, lesiones',
     rules: { required: true },
   },
 ];

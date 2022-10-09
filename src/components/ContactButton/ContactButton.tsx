@@ -9,10 +9,9 @@ import { ComponentPropsBase } from 'models/baseProps.model';
 import { FC, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { sendEmail } from 'utils/sendEmail';
+import { CONTACT_FORM_ID } from 'constants/form';
 import { StyledBox, StyledButtonWrapper } from './ContactButton.styled';
 import { contactDataConfig } from './formConfigs';
-
-const FORM_ID = 'form-contact';
 
 export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
   const [open, setOpen] = useState(false);
@@ -37,7 +36,7 @@ export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
-      console.error('sending contact foprm error', error);
+      console.error('sending contact form error', error);
     }
   };
   return (
@@ -53,7 +52,7 @@ export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
           <Typography variant="h4" component="h2" align="center" gutterBottom>
             Contáctanos!
           </Typography>
-          <form onSubmit={handleSubmit(onSubmit)} id={FORM_ID} ref={formRef}>
+          <form onSubmit={handleSubmit(onSubmit)} id={CONTACT_FORM_ID} ref={formRef}>
             <FormBuilder configs={contactDataConfig} control={control} errors={errors} />
           </form>
           <StyledButtonWrapper>
@@ -63,7 +62,7 @@ export const ContactButton:FC<ComponentPropsBase> = ({ className }) => {
               loadingPosition="start"
               startIcon={<SendIcon />}
               type="submit"
-              form={FORM_ID}
+              form={CONTACT_FORM_ID}
               variant="contained"
             >
               Enviar

@@ -45,7 +45,7 @@ export type IntestinalDataField =
 
 export type CurrentFoodHabitDataField = 'current_food_habit'
 
-export type PathologiesDataField = 'allergy'
+export type PathologiesDataField = 'pathologies'
 
 export type RelatedDataField = 'relatedData'
 
