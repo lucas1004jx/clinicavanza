@@ -1,6 +1,7 @@
 import { DefaultLayout } from 'layout/DefaultLayout';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import { LandingPage } from 'pageComponents/LandingPage';
 
 const Landing: NextPage = () => (
@@ -13,7 +14,9 @@ const Landing: NextPage = () => (
     </Head>
     <DefaultLayout>
       <LandingPage />
-
+      <Link href="/inicial">
+        inital form
+      </Link>
     </DefaultLayout>
   </>
 );
