@@ -26,7 +26,7 @@ export const Service:FC = () => (
         alt="recupera de lesiones"
         actionText="Ver Tarifa"
         description="Tratamiento de lesiones musculo-esqueléticas, viscerales, deportivas con multitud de técnicas encaminadas a la disminución del dolor y recuperación del paciente."
-        dialogTitle="FISIOTERAPIA"
+        dialogTitle="Fioterapia"
         dialogText="35€ / sesión"
       />
 

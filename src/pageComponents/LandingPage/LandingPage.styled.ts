@@ -1,5 +1,8 @@
 import {
-  Container, Paper, Stack, Typography,
+  Dialog,
+  IconButton,
+  ListItem,
+  Paper, Stack, Typography,
 } from '@mui/material';
 import { styled } from '@mui/system';
 import theme from 'styles/theme';
@@ -47,4 +50,16 @@ export const StyledMap = styled('iframe')({
   width: '100%',
   height: '240px',
   border: 'none',
+});
+
+export const StyledDialogInner = styled('div')({
+  padding: theme.spacing(2),
+  position: 'relative',
+});
+
+export const StyledCloseIcon = styled(IconButton)({
+  padding: theme.spacing(2),
+  position: 'absolute',
+  right: 0,
+  top: 0,
 });
