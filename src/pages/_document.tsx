@@ -10,9 +10,12 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
+
         <Head>
+          <meta name="description" content="Somos un centro de fisioterapia avanzada y nutrición , situado en La Cisterniga, Valladolid." />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link
             rel="stylesheet"
