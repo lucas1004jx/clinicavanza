@@ -15,11 +15,15 @@ export const Accordion:FC<Props> = ({
   title, content, defaultExpanded, id,
 }) => {
   const [expaned, setExpaned] = useState(defaultExpanded);
+
   useEffect(() => {
     setExpaned(defaultExpanded);
   }, [defaultExpanded]);
+
+  const toggleExpanded = () => setExpaned((prev) => !prev);
+
   return (
-    <AccordionUI expanded={expaned} id={id}>
+    <AccordionUI expanded={expaned} id={id} onChange={toggleExpanded}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         id={`${title}-accordion`}
