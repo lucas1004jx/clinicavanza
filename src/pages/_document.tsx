@@ -15,6 +15,11 @@ export default class MyDocument extends Document {
           <meta name="description" content="Somos un centro de fisioterapia avanzada y nutrición , situado en La Cisterniga, Valladolid." />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta property="og:title" content="Centro Avanza" />
+          <meta property="og:description" content="Somos un centro de fisioterapia avanzada y nutrición , situado en La Cisterniga, Valladolid." />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="/images/logo.png" />
+          <meta property="og:url" content="https://centroavanza.net/" />
 
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link

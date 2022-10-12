@@ -5,7 +5,6 @@ import { LandingPage } from 'pageComponents/LandingPage';
 
 const Landing: NextPage = () => (
   <>
-
     <Head>
       <title>Centro Avanza</title>
       <meta name="description" content="Somos un centro de fisioterapia avanzada y nutrición , situado en La Cisterniga, Valladolid." />
