@@ -9,9 +9,7 @@ interface Props {
 
 export const WhatsappButton:FC<Props> = ({ phoneNumber }) => {
   const { isMobile } = useDeviceDetect();
-  const whatsappBaseUrl = isMobile
-    ? `whatsapp://send?phone=${phoneNumber}text=`
-    : `https://web.whatsapp.com/send?phone=${phoneNumber}?text=`;
+  const whatsappBaseUrl = `https://api.whatsapp.com/send?phone=34${phoneNumber}`;
   const handleOnClick = () => {
     window.open(
       whatsappBaseUrl,
