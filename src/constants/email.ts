@@ -2,7 +2,7 @@ export const PUBLIC_KEY = 'Y28RNO3RFA646EQhv';
 export const PRIVATE_KEY = 'Bsq2M0R9f4FbiU7B64WgG';
 
 export const SERVICE_ID = 'service_kbjadkl';
-export const INITIAL_FORM_TEMPLATE_ID = 'template_kcst2gc';
+export const INITIAL_FORM_TEMPLATE_ID = 'template_gxsektk';
 export const CONTACT_FORM_TEMPLATE_ID = 'template_hyxn6el';
 
 // test tempalte
