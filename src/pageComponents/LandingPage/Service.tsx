@@ -8,7 +8,7 @@ import { TrainingPricing } from './trainingPricing';
 
 export const Service:FC = () => (
   <>
-    <StyledTitle fontWeight="lighter">NUESTROS SERVICIOS </StyledTitle>
+    <StyledTitle fontWeight="lighter" gutterBottom>NUESTROS SERVICIOS </StyledTitle>
     <Stack spacing={4}>
       <ServiceCard
         title="NUTRICIÓN"

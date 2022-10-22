@@ -28,7 +28,7 @@ export const Footer:FC<ComponentPropsBase> = ({ className }) => (
       <Link href={insHref} target="_blank">
         <InstagramIcon />
       </Link>
-      <FacebookIcon />
+      {/* <FacebookIcon /> */}
     </StyledSocialMediaWrapper>
     <StyledImage src="/images/logo.png" alt="logo" />
     <CheckPoints />

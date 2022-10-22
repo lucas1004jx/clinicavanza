@@ -16,4 +16,5 @@ export const StyledAppBar = styled(AppBar)({
 export const StyledImage = styled('img')({
   height: '100%',
   objectFit: 'contain',
+  cursor: 'pointer',
 });

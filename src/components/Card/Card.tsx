@@ -1,5 +1,4 @@
 import {
-  Card as MuiCard,
   CardActions,
   CardContent,
   CardMedia,
@@ -8,6 +7,7 @@ import {
 } from '@mui/material';
 
 import { FC } from 'react';
+import { StyledCard, StyledCardMediaWrapper } from './Card.styled';
 
 interface Action {
   text:string
@@ -31,24 +31,29 @@ export const Card:FC<Props> = ({
   primaryAction,
   secondaryAction,
 }) => (
-  <MuiCard>
-    <CardMedia
-      component="img"
-      alt={alt}
-      height="140"
-      image={imgUrl}
-    />
-    <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
-        {title}
-      </Typography>
-      <Typography variant="body2">
-        {description}
-      </Typography>
-    </CardContent>
-    <CardActions>
-      {primaryAction && <Button size="small" onClick={primaryAction.handler}>{primaryAction.text}</Button>}
-      {secondaryAction && <Button size="small" onClick={secondaryAction.handler}>{secondaryAction.text}</Button>}
-    </CardActions>
-  </MuiCard>
+  <StyledCard>
+    <StyledCardMediaWrapper>
+      <CardMedia
+        component="img"
+        alt={alt}
+        height="100%"
+        image={imgUrl}
+      />
+    </StyledCardMediaWrapper>
+    <div>
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {title}
+        </Typography>
+        <Typography variant="body2">
+          {description}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        {primaryAction && <Button size="small" onClick={primaryAction.handler}>{primaryAction.text}</Button>}
+        {secondaryAction && <Button size="small" onClick={secondaryAction.handler}>{secondaryAction.text}</Button>}
+      </CardActions>
+    </div>
+
+  </StyledCard>
 );
