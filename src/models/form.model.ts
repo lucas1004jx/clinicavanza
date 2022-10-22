@@ -14,6 +14,7 @@ export type DietDataField =
 | 'least_favorite_food'
 | 'favorite_food'
 | 'food_schedule'
+| 'food_description'
 | 'getup_time'
 | 'job_description'
 | 'gym_time'

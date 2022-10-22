@@ -119,7 +119,13 @@ export const dietDataConfigs:FormConfig<DietDataField>[] = [
         name: '6',
       },
     ],
-
+    rules: { required: true },
+  },
+  {
+    type: 'textArea',
+    name: 'food_description',
+    fieldName: 'Describe las comidas',
+    rules: { required: true },
   },
   {
     type: 'textArea',
