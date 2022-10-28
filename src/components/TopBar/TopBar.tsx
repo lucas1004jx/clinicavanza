@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Typography } from '@mui/material';
 import Link from 'next/link';
 import { FC } from 'react';
@@ -8,10 +9,13 @@ import {
 
 export const TopBar: FC = () => (
   <StyledAppBar>
+    {/* <Link href="/">
+      <StyledImage src="/images/logo-1.png" alt="logo" />
+    </Link> */}
     <Link href="/">
-      <StyledImage src="/images/logo.png" alt="logo" />
+      <a>
+        <Typography>ES HORA DE CAMBIAR</Typography>
+      </a>
     </Link>
-
-    <Typography>ES HORA DE CAMBIAR</Typography>
   </StyledAppBar>
 );

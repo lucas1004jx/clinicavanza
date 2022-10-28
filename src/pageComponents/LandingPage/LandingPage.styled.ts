@@ -1,7 +1,5 @@
 import {
-  Dialog,
   IconButton,
-  ListItem,
   Paper, Stack, Typography,
 } from '@mui/material';
 import { styled } from '@mui/system';
@@ -10,6 +8,22 @@ import { ContactButton } from '../../components/ContactButton/ContactButton';
 
 export const StyledHeader = styled(Stack)({
   margin: theme.spacing(3, 0),
+  [theme.breakpoints.up('sm')]: {
+    margin: theme.spacing(6, 0),
+  },
+  [theme.breakpoints.up('md')]: {
+    marginTop: theme.spacing(8),
+  },
+});
+
+export const StyledHeaderText = styled(Typography)({
+  fontSize: theme.typography.body2.fontSize,
+  [theme.breakpoints.up('sm')]: {
+    fontSize: theme.typography.body1.fontSize,
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: theme.typography.h6.fontSize,
+  },
 });
 
 export const StyledTitle = styled(Typography)({
