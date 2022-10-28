@@ -11,7 +11,7 @@ export const Header: FC = () => (
     <StyledImg src="/images/logo.png" alt="logo" />
     <Stack alignItems="center" spacing={1}>
       <Typography align="center">
-        Somos un centro de fisioterapia avanzada y nutrición , situado en La Cisterniga, Valladolid.
+        Somos un centro de  nutrición , situado en La Cisterniga, Valladolid.
       </Typography>
       <ContactButton />
     </Stack>

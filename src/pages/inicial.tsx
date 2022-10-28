@@ -8,7 +8,7 @@ const RevisionPage:FC = () => (
   <>
     <Head>
       <title>Centro Avanza - formulario inicial </title>
-      <meta name="description" content="Somos un centro de fisioterapia avanzada y nutrición , situado en La Cisterniga, Valladolid." />
+      <meta name="description" content="Somos un centro de nutrición , situado en La Cisterniga, Valladolid." />
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <DefaultLayout>

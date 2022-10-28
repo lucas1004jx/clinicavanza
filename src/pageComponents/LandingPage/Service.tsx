@@ -20,7 +20,7 @@ export const Service:FC = () => (
         dialogContent={<NutritionPricing />}
       />
 
-      <ServiceCard
+      {/* <ServiceCard
         title="FISIOTERAPIA"
         imgUrl="/images/fisio.png"
         alt="recupera de lesiones"
@@ -28,7 +28,7 @@ export const Service:FC = () => (
         description="Tratamiento de lesiones musculo-esqueléticas, viscerales, deportivas con multitud de técnicas encaminadas a la disminución del dolor y recuperación del paciente."
         dialogTitle="Fioterapia"
         dialogText="35€ / sesión"
-      />
+      /> */}
 
       <ServiceCard
         title="ASESORAMIENTO DEPORTIVA"
