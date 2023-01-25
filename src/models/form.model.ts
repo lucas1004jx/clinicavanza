@@ -29,7 +29,7 @@ export type IntestinalDataField =
 | 'haveGastritis'
 | 'haveIntestinalPain'
 | 'havePeriodPain'
-| 'isChilySentitive'
+| 'isChillySensitive'
 | 'haveLiquidRetention'
 | 'haveNausea'
 | 'haveSleepProblem'
@@ -43,6 +43,13 @@ export type IntestinalDataField =
 | 'eatForBoring'
 | 'isHungryEvery3Hours'
 | 'takeMedication'
+| 'diagnosticTest'
+| 'antibioticUse'
+| 'eatAlone'
+| 'dietHistory'
+| 'whoPrepareTheFood'
+| 'eatingTime'
+| 'familyIllnessHistory'
 
 export type CurrentFoodHabitDataField = 'current_food_habit'
 

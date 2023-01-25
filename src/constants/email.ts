@@ -4,6 +4,7 @@ export const PRIVATE_KEY = 'Bsq2M0R9f4FbiU7B64WgG';
 export const SERVICE_ID = 'service_kbjadkl';
 export const INITIAL_FORM_TEMPLATE_ID = 'template_gxsektk';
 export const CONTACT_FORM_TEMPLATE_ID = 'template_hyxn6el';
+export const SURVEY_FORM_TEMPLATE_ID = '';
 
 // test tempalte
 // export const PUBLIC_KEY = '2VBJuUAH9h8LWzc3V';

@@ -295,60 +295,6 @@ export const intestinalDataConfigs :FormConfig<IntestinalDataField>[] = [
     name: 'takeMedication',
     fieldName: '¿Tomas alguna medicación? Descríbelo:',
   },
-  {
-    type: 'textArea',
-    name: 'antibioticUse',
-    fieldName: 'Uso antibiótico ¿Cuando fue la ultima vez?',
-    rules: { required: true },
-  },
-  {
-    type: 'select',
-    name: 'diagnosticTest',
-    fieldName: '¿Tiene alguna prueba diagnostica relacionado con algún problema intestial?',
-    options: YES_NO_OPTION,
-    rules: { required: true },
-  },
-  {
-    type: 'select',
-    name: 'eatAlone',
-    fieldName: '¿Come solo o acompañado?',
-    options: [
-      {
-        id: 'solo',
-        name: 'Solo',
-      },
-      {
-        id: 'acompañado',
-        name: 'Acompañado',
-      },
-    ],
-    rules: { required: true },
-  },
-  {
-    type: 'select',
-    name: 'dietHistory',
-    fieldName: '¿Has hecho dieta anteriomente?',
-    options: YES_NO_OPTION,
-    rules: { required: true },
-  },
-  {
-    type: 'textArea',
-    name: 'whoPrepareTheFood',
-    fieldName: '¿Quien prepara la comida?',
-    rules: { required: true },
-  },
-  {
-    type: 'textArea',
-    name: 'eatingTime',
-    fieldName: '¿Que tiempo dedica para cada comida?',
-    rules: { required: true },
-  },
-  {
-    type: 'textArea',
-    name: 'familyIllnessHistory',
-    fieldName: 'Antecedentes familiares de enfermedades',
-    rules: { required: true },
-  },
 ];
 
 export const pathologiesDataConfigs:FormConfig<PathologiesDataField>[] = [
