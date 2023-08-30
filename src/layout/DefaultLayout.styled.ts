@@ -2,7 +2,7 @@ import { styled } from '@mui/system';
 import { Footer } from 'components/Footer/Footer';
 import { TOP_BAR_HEIGHT, FOOTER_HEIGHT } from 'constants/style';
 
-export const StyledlayoutContainer = styled('main')({
+export const StyledLayoutContainer = styled('main')({
   paddingTop: TOP_BAR_HEIGHT,
   paddingBottom: FOOTER_HEIGHT,
   position: 'relative',

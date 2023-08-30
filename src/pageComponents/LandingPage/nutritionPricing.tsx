@@ -18,7 +18,7 @@ const presentPricing = [
 export const NutritionPricing = () => (
   <>
     <Typography fontWeight="bold">
-      Online : ( 150€)
+      Online : ( 200€)
     </Typography>
 
     <Divider />
@@ -34,7 +34,7 @@ export const NutritionPricing = () => (
     </List>
 
     <Typography fontWeight="bold">
-      Presencial : (50€)
+      Presencial : (75€)
     </Typography>
 
     <Divider />

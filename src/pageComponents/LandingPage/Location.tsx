@@ -22,7 +22,7 @@ export const Location:FC = () => (
         <br />
         La Cisterniga
         <br />
-        Valldadoid
+        Valladolid
       </Typography>
     </StyledSectionTextWrapper>
   </StyledSection>

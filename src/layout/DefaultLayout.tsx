@@ -1,12 +1,12 @@
 import { TopBar } from 'components/TopBar/TopBar';
 import { FC } from 'react';
 import { DefaultLayoutProps } from './DefaultLayout.model';
-import { StyledFooter, StyledlayoutContainer } from './DefaultLayout.styled';
+import { StyledFooter, StyledLayoutContainer } from './DefaultLayout.styled';
 
 export const DefaultLayout:FC<DefaultLayoutProps> = ({ children }) => (
-  <StyledlayoutContainer>
+  <StyledLayoutContainer>
     <TopBar />
     {children}
     <StyledFooter />
-  </StyledlayoutContainer>
+  </StyledLayoutContainer>
 );
