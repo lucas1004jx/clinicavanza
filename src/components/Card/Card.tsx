@@ -36,7 +36,7 @@ export const Card:FC<Props> = ({
       <CardMedia
         component="img"
         alt={alt}
-        height="200"
+        height="100%"
         image={imgUrl}
       />
     </StyledCardMediaWrapper>

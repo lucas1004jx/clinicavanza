@@ -13,7 +13,7 @@ export const StyledCardMediaWrapper = styled('div')({
   width: '100%',
   height: '140px',
   [theme.breakpoints.up('sm')]: {
-    height: 'auto',
+    height: '200px',
     width: '40%',
     flexShrink: '0',
   },
