@@ -5,15 +5,13 @@ import Carousel from 'react-material-ui-carousel';
 import { StyledSection } from './LandingPage.styled';
 
 export const Results:FC = () => {
-  console.log();
-
   const items:ImageModel[] = [
     {
       src: '/images/dieta.png',
       title: 'dieta',
       description: 'dieta',
     },
- {
+    {
       src: '/images/fisio.png',
       title: 'Fisio',
       description: 'Fisio',
