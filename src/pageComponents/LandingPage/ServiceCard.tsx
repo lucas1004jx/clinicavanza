@@ -4,7 +4,7 @@ import {
 import { Card, Props as CardProps } from 'components/Card/Card';
 import { FC, useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
-import { StyledDialogInner, StyledCloseIcon } from './LandingPage.styled';
+import { StyledDialogInner, StyledCloseIcon, StyledDialogTitle } from './LandingPage.styled';
 
 interface Props extends Pick<CardProps,
     |'title'
@@ -14,12 +14,11 @@ interface Props extends Pick<CardProps,
 >{
   actionText:string
   dialogTitle:string
-  dialogText?:string
   dialogContent?:JSX.Element
 }
 
 export const ServiceCard:FC<Props> = ({
-  actionText, dialogTitle, dialogContent, dialogText, ...props
+  actionText, dialogTitle, dialogContent, ...props
 }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -34,14 +33,10 @@ export const ServiceCard:FC<Props> = ({
         aria-describedby="dialog-description"
       >
         <StyledDialogInner>
-          <Typography id="dialog-title" variant="h6" gutterBottom>
+          <StyledDialogTitle id="dialog-title" variant="h6" gutterBottom>
             {dialogTitle}
-          </Typography>
-          {dialogContent || (
-          <Typography id="dialog-description">
-            {dialogText}
-          </Typography>
-          )}
+          </StyledDialogTitle>
+          {dialogContent}
           <StyledCloseIcon
             aria-label="close"
             onClick={handleClose}

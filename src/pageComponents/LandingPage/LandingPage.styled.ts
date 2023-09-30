@@ -71,6 +71,10 @@ export const StyledDialogInner = styled('div')({
   position: 'relative',
 });
 
+export const StyledDialogTitle = styled(Typography)({
+  marginRight: theme.spacing(4),
+});
+
 export const StyledCloseIcon = styled(IconButton)({
   padding: theme.spacing(2),
   position: 'absolute',

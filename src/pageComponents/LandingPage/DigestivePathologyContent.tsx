@@ -20,7 +20,7 @@ const pricing = [
   '- 200 € ( trimestre)',
 ];
 
-export const NutritionPricing = () => (
+export const DigestivePathologyContent = () => (
   <>
 
     <List>
