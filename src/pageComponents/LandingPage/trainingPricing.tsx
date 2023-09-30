@@ -15,7 +15,7 @@ const advancePricing = [
 export const TrainingPricing = () => (
   <>
     <Typography fontWeight="bold">
-      Initial : ( 120 € / trimestre )
+      Initial : ( 150 € / trimestre )
     </Typography>
     <Divider />
     <List>
